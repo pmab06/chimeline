@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('./src/assets/Inter-VariableFont_slnt\,wght.ttf');
+}
+
+*{
+  font-family: 'Inter';
+}
+
+body{
+  overflow-y: hidden;
+  margin: 0;
+  height: 100vh;
+  background: url("./assets/sky.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; 
+}
+
+.card input[type=text]{
+  padding: 10px;
+  border-radius: 1vmin;
+  border: 1px solid gray
+}
+
+.homepage-card{
+  border-radius: 2vmin;
+  min-width: 800px;
+}
+
+h1.card-title{
+  font-size: xx-large;
+  font-weight: bold;
+}
