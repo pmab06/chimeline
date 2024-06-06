@@ -18,7 +18,7 @@ function App() {
 
             <label htmlFor="password">Password</label>
             <input type="text" id="password" className="mb-4"></input>
-            <button type="button" class="btn btn-primary mb-5">Create account</button>
+            <button type="button" className="btn btn-primary mb-5">Create account</button>
             <p className="card-subtitle align-self-center">...or <button type="button" className="btn btn-outline-primary">Login</button> if you already have one</p>
           </div>
         </div>
