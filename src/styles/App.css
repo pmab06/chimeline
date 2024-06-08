@@ -7,23 +7,20 @@
   font-family: 'Inter';
 }
 
-body{
-  overflow-y: hidden;
-  margin: 0;
-  height: 100vh;
-  background: url("./assets/sky.jpg");
+.Start{
+  background: url("../assets/sky.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; 
 }
 
-.card input[type=text]{
+.Start > main > .card input[type=text]{
   padding: 10px;
   border-radius: 1vmin;
   border: 1px solid gray
 }
 
-.homepage-card{
+.Start > main > .homepage-card{
   border-radius: 2vmin;
   min-width: 800px;
 }
@@ -31,4 +28,20 @@ body{
 h1.card-title{
   font-size: xx-large;
   font-weight: bold;
+}
+
+nav{
+  padding: 30px;
+  background-color: rgba(15, 15, 75, 0.446);
+}
+nav>ul{
+  margin: 0;
+  width: 50%;
+}
+nav>ul>li{
+  list-style: none;
+}
+nav>ul>li>a{
+  color: white;
+  text-decoration: none;
 }
