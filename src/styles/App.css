@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('./src/assets/Inter-VariableFont_slnt\,wght.ttf');
+}
+
+*{
+  font-family: 'Inter';
+}
+
+.Start{
+  background: url("../assets/sky.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; 
+}
+
+.Start > main > .card input[type=text]{
+  padding: 10px;
+  border-radius: 1vmin;
+  border: 1px solid gray
+}
+
+.Start > main > .homepage-card{
+  border-radius: 2vmin;
+  min-width: 800px;
+}
+
+h1.card-title{
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+nav{
+  padding: 30px;
+  background-color: rgba(15, 15, 75, 0.446);
+}
+nav>ul{
+  margin: 0;
+  width: 50%;
+}
+nav>ul>li{
+  list-style: none;
+}
+nav>ul>li>a{
+  color: white;
+  text-decoration: none;
+}
