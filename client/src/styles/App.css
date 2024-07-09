@@ -31,8 +31,8 @@ h1.card-title{
 }
 
 nav{
-  padding: 30px;
-  background-color: rgba(15, 15, 75, 0.446);
+  padding: 15px;
+  background-color: rgba(0, 3, 10, 0.172);
 }
 nav>ul{
   margin: 0;
@@ -44,4 +44,23 @@ nav>ul>li{
 nav>ul>li>a{
   color: white;
   text-decoration: none;
+}
+
+.pfp{
+  height: 2.5em;
+  border-radius: 50%;
+}
+
+.PostContainer{
+  border: 1px solid gray;
+  border-radius: 2vmin;
+  padding: 20px;
+  margin: 10px;
+  max-width: 40%;
+}
+.PostData img, strong {
+  margin-right: 10px;
+}
+.PostData span{
+  opacity: 40%;
 }
