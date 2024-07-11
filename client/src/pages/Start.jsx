@@ -1,9 +1,3 @@
-
-
-
-
-
-
 function Start() {
 	return <div>
 		<div className="Start d-flex flex-column vh-100">
