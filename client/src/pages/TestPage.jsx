@@ -11,10 +11,10 @@ function TestPage() {
 				if (Array.isArray(response.data)) { 
 					setTbData(response.data) 
 				} else {
-					console.error('API Response is not an array: ', response.data)
+					console.error('/!\ API Response is not an array: ', response.data)
 				}
 			})
-			.catch(error => { console.error('Error while fetching data: ', error) })
+			.catch(error => { console.error('/!\ Error while fetching data: ', error) })
 	}, []);
 
 	// HTML -----------------------------

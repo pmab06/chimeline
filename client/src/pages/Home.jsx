@@ -12,14 +12,17 @@ function Home() {
 				if (Array.isArray(response.data)) {
 					setTbData(response.data)
 				} else {
-					console.error('API Response is not an array: ', response.data)
+					setTbData([])
+					console.error('/!\\ API Response is not an array: ', response.data)
 				}
 			})
-			.catch(error => {setTbData([]); console.error('Error while fetching data: ', error) })
+			.catch(error => {
+				setTbData([]); 
+				console.error('/!\\ Error while fetching data: ', error) })
 	}, []);
 
 
-
+	console.log(tbdata.length)
 
 
 
