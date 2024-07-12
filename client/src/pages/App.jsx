@@ -1,6 +1,6 @@
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "../styles/App.css"
+import "../styles/App.css";
 import Start from "./Start.jsx";
 import TestPage from "./TestPage.jsx";
 import Home from "./Home.jsx";

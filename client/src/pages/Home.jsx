@@ -1,11 +1,52 @@
-import Post from "../components/Post"; 
+import Post from "../components/Post";
+import Subtitle from "../components/Subtitle";
+import { useEffect, useState } from "react";
+import axios from 'axios';
 
-function Home(){
+function Home() {
+	const [tbdata, setTbData] = useState([]);
+
+	useEffect(() => {
+		axios.get('/api/tbdata')
+			.then(response => {
+				if (Array.isArray(response.data)) {
+					setTbData(response.data)
+				} else {
+					console.error('API Response is not an array: ', response.data)
+				}
+			})
+			.catch(error => {setTbData([]); console.error('Error while fetching data: ', error) })
+	}, []);
+
+
+
+
+
+
+
 	return <>
-	<h1>Home</h1>
-	<a href="/">Click me to return to landing page</a>
-	<Post profilePicture="defaulter.png" displayName="CoolUser123" userName="MrCoolGuy" content={"Hi guys!!!!! This is a very cool website 🤫🧏"} likes={50} replies={20} reposts={2} createdAt={"5h ago"}/>
-	<Post profilePicture="defaulter.png" displayName="Not very cool" userName="MrAngryGuy" content={"This is a very bad post! Lots of hate!"} likes={2} replies={540} reposts={476} createdAt={"just now"}/>
+
+		<h1>Home</h1>
+		<a href="/">Click me to return to landing page</a>
+		{
+			tbdata.length > 0 ? (
+				tbdata.map(item => (
+					<Post
+						profilePicture="defaulter.png"
+						displayName="Not from DB"
+						userName="NotPullingFromDatabase"
+						content={item.post_content}
+						likes={item.likes}
+						replies={item.replies}
+						reposts={item.reposts}
+						createdAt={item.created_at}
+					/>
+				))
+			) : (
+				<Subtitle text="No posts found"/>
+			)
+		}
+
 	</>
 }
 export default Home;
