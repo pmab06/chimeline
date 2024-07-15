@@ -1,10 +1,15 @@
+/* App-wide CSS */
 @font-face {
   font-family: 'Inter';
   src: url('./src/assets/Inter-VariableFont_slnt\,wght.ttf');
 }
 
-*{
+html{
   font-family: 'Inter';
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 .Start{
@@ -51,16 +56,22 @@ nav>ul>li>a{
   border-radius: 50%;
 }
 
-.PostContainer{
+.BorderedContainer{
   border: 1px solid gray;
   border-radius: 2vmin;
-  padding: 20px;
-  margin: 10px;
-  max-width: 40%;
+}
+
+.PostContainer{
+  padding: 1rem;
+  margin-bottom: 1rem;
 }
 .PostData img, strong {
-  margin-right: 10px;
+  margin-right: 0.5rem;
 }
 .PostData span{
+  opacity: 40%;
+}
+
+.subtitle{
   opacity: 40%;
 }

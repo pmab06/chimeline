@@ -6,9 +6,10 @@
   "scripts": {
     "start": "node server/server.js",
     "server": "nodemon server/server.js",
+    "schema": "node server/createSchema.js",
     "client": "npm start --prefix client",
     "client-build": "npm run build --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run client\" \"npm run server\""
   },
   "author": "",
   "license": "ISC",

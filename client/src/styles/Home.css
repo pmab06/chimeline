@@ -1,0 +1,34 @@
+body{
+    height: 100%;
+}
+main{
+    overflow: auto;
+}
+aside{
+    height: 100vh;
+    overflow: hidden;
+}
+.sidebar{
+    padding: 2rem;
+}
+
+.sidebar a{
+    text-decoration: none;
+    color:currentColor;
+    margin-left: 1rem;
+}
+
+.SidebarButton{
+    border-radius: 0.5rem;
+}
+.SidebarButton img{
+    width: 2rem;
+}
+.SidebarButton:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.SidebarButton:active{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
