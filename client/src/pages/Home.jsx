@@ -1,10 +1,10 @@
-// import Post from "../components/Post";
-// import Subtitle from "../components/Subtitle";
-// import SidebarButton from "../components/SidebarButton";
-import { Post, SendButton, SidebarButton, Subtitle } from '../components';
-import { useEffect, useState } from "react";
+// import Post from '../components/Post';
+// import Subtitle from '../components/Subtitle';
+// import SidebarButton from '../components/SidebarButton';
+import { Post, Sidebar, WritePost, Subtitle, ReactionButton } from '../components';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
-import "../styles/Home.css";
+import '../styles/Home.css';
 
 
 function Home() {
@@ -26,28 +26,24 @@ function Home() {
 			})
 	}, []);
 
+	
+// ==============================      HTML       ============================== // 
 	return <>
+		<div className='d-flex flex-row p-3 container'>
 
-
-		<div className='d-flex flex-row p-3'>
-			
 			{/* ---------------- Sidebar 1 ---------------- */}
-			<aside className="d-flex flex-column col-12 col-md-3 sidebar BorderedContainer">
-				<h2>Home</h2>
-				<SidebarButton icon="Heart_Empty.svg" text="Home" path="/Home"/>
-				<SidebarButton icon="SendIcon.svg" text="Test Page" path="/TestPage"/>
-				<SidebarButton icon="Heart_Empty.svg" text="Landing Page" path="/"/>
-			</aside>
+			<Sidebar type='left' />
 
 			{/* ---------------- Main content ---------------- */}
 			<main className='d-flex flex-column align-items-center col-12 col-md-6 px-4'>
+				<WritePost/>
 				{
 					tbdata.length > 0 ? (
 						tbdata.map(item => (
 							<Post
-								profilePicture="defaulter.png"
-								displayName="Not from DB"
-								userName="NotPullingFromDatabase"
+								profilePicture='defaulter.png'
+								displayName={item.displayName}
+								userName={item.userName}
 								content={item.post_content}
 								likes={item.likes}
 								replies={item.replies}
@@ -56,19 +52,13 @@ function Home() {
 							/>
 						))
 					) : (
-						<Subtitle text="No posts found :(" />
+						<Subtitle text='No posts found :(' />
 					)
 				}
 			</main>
 
 			{/* ---------------- Sidebar 2 ---------------- */}
-			<aside className="d-flex flex-column sidebar col-12 col-md-3 BorderedContainer">
-				<h2>See what's going on</h2>
-				<button>Trending</button>
-				<button>Trending</button>
-				<button>Trending</button>
-				<button>Trending</button>
-			</aside>
+			<Sidebar />
 		</div>
 	</>
 }

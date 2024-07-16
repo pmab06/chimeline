@@ -1,34 +1,81 @@
-body{
+body {
     height: 100%;
-}
-main{
-    overflow: auto;
-}
-aside{
-    height: 100vh;
     overflow: hidden;
 }
-.sidebar{
+
+main {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 100vh;
+}
+
+.container {
+    max-height: 100vh;
+    max-width: none;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+    height: 100vh;
     padding: 2rem;
+    overflow: hidden;
 }
 
-.sidebar a{
-    text-decoration: none;
-    color:currentColor;
-    margin-left: 1rem;
+.sidebar img {
+    margin-right: 1rem;
 }
 
-.SidebarButton{
+.SidebarButton {
+    background-color: #00000000;
+    border: none;
+    width: 100%;
     border-radius: 0.5rem;
 }
-.SidebarButton img{
+
+.SidebarButton img {
     width: 2rem;
 }
-.SidebarButton:hover{
+
+.SidebarButton:hover {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-.SidebarButton:active{
+.SidebarButton:active {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #00000020 #ffffff00;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #ffffff00;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #000000;
+    border-radius: 50%;
+    border: 0px solid #ffffff00;
+}
+
+/* ===== New post input ===== */
+textarea {
+    width: 100%;
+    border-radius: 2vmin;
+    padding: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    resize: none;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: rgba(0, 0, 0, 0.8);
+}

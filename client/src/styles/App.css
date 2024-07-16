@@ -57,7 +57,7 @@ nav>ul>li>a{
 }
 
 .BorderedContainer{
-  border: 1px solid gray;
+  border: 1px solid rgba(0, 0, 0, 0.4);
   border-radius: 2vmin;
 }
 
@@ -73,5 +73,18 @@ nav>ul>li>a{
 }
 
 .subtitle{
+  margin-top: 10vh;
   opacity: 40%;
+}
+
+.SendButton{
+  width: 2em;
+  height: 2em;
+  background-color: blue;
+  border: none;
+  padding: 50%;
+}
+
+.reaction-button{
+  
 }
