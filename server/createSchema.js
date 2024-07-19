@@ -24,4 +24,4 @@ connection.query(createTableQuery, (err, results, fields) => {
             console.log('(i) Connection ended')
         }
     })
-});
+}); 
