@@ -15,67 +15,80 @@ main {
 }
 
 /* ===== Sidebar ===== */
-.sidebar {
-    height: 100vh;
-    padding: 2rem;
-    overflow: hidden;
-}
+    .sidebar {
+        height: 100vh;
+        padding: 2rem;
+        overflow: hidden;
+    }
 
-.sidebar img {
-    margin-right: 1rem;
-}
+    .sidebar span.text {
+        margin-left: 1rem;
+    }
 
-.SidebarButton {
-    background-color: #00000000;
-    border: none;
-    width: 100%;
-    border-radius: 0.5rem;
-}
-
-.SidebarButton img {
-    width: 2rem;
-}
-
-.SidebarButton:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-}
-
-.SidebarButton:active {
-    background-color: rgba(0, 0, 0, 0.3);
-}
+    /* Buttons for new tabs */
+        .SidebarButton {
+            background-color: #00000000;
+            border: none;
+            width: 100%;
+            border-radius: 0.5rem;
+        }
+    
+        .SidebarButton span.icon {
+            width: 2rem;
+        }
+    
+        .SidebarButton:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+    
+        .SidebarButton:active {
+            background-color: rgba(0, 0, 0, 0.3);
+        }
 
 /* ===== Scrollbar CSS ===== */
-/* Firefox */
-* {
-    scrollbar-width: thin;
-    scrollbar-color: #00000020 #ffffff00;
-}
+    /* Firefox */
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: #00000020 #ffffff00;
+        }
 
-/* Chrome, Edge, and Safari */
-*::-webkit-scrollbar {
-    width: 5px;
-}
+    /* Chrome, Edge, and Safari */
+        *::-webkit-scrollbar {
+            width: 5px;
+        }
 
-*::-webkit-scrollbar-track {
-    background: #ffffff00;
-}
+        *::-webkit-scrollbar-track {
+            background: #ffffff00;
+        }
 
-*::-webkit-scrollbar-thumb {
-    background-color: #000000;
-    border-radius: 50%;
-    border: 0px solid #ffffff00;
-}
+        *::-webkit-scrollbar-thumb {
+            background-color: #000000;
+            border-radius: 50%;
+            border: 0px solid #ffffff00;
+        }
 
 /* ===== New post input ===== */
-textarea {
-    width: 100%;
-    border-radius: 2vmin;
-    padding: 1rem;
-    border: 1px solid rgba(0, 0, 0, 0.4);
-    resize: none;
-}
+    textarea {
+        width: 100%;
+        border-radius: 2vmin;
+        padding: 1rem;
+        border: 1px solid rgba(0, 0, 0, 0.4);
+        resize: none;
+    }
 
-textarea:focus {
-    outline: none;
-    border-color: rgba(0, 0, 0, 0.8);
-}
+    textarea:focus {
+        outline: none;
+        border-color: rgba(0, 0, 0, 0.8);
+    }
+
+/* ======== Div for Reaction buttons ======== */
+    .interaction-footer{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-around;
+      }
+      .interaction-footer div{
+        display: flex;
+        align-items: center;
+      }

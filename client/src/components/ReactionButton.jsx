@@ -1,6 +1,13 @@
-function ReactionButton(icon) {
-    <button className='reaction-button' style={{ backgroundImage: `url('../src/assets/${icon}_Empty.svg')`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center', width: '2rem', height: '2rem' }}></button>
+import React, {useState} from 'react'
 
+function ReactionButton({ icon }) {
+    return (
+        <button className='reaction-button'>
+            <span className="material-symbols-outlined">
+                {icon}
+            </span>
+        </button>
+    );
 }
 
 export default ReactionButton

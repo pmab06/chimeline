@@ -5,9 +5,9 @@ function Sidebar(type) {
     const leftSidebar = (
         <>
             <h2>Home</h2>
-            <SidebarButton icon='Heart_Empty.svg' text='Home' path='/Home' />
-            <SidebarButton icon='SendIcon.svg' text='Test Page' path='/TestPage' />
-            <SidebarButton icon='Heart_Empty.svg' text='Landing Page' path='/' />
+            <SidebarButton icon='home' text='Home' path='/Home' />
+            <SidebarButton icon='labs' text='Test Page' path='/TestPage' />
+            <SidebarButton icon='tooltip' text='Landing Page' path='/' />
         </>
     )
 
@@ -21,7 +21,7 @@ function Sidebar(type) {
         <aside className='d-flex flex-column col-12 col-md-3'>
             <div className='sidebar BorderedContainer'>
                 {
-                    (type.type == 'left' ? leftSidebar : rightSidebar)
+                    (type.type == 'left' ? leftSidebar : type.type == 'right' ? rightSidebar : '')
                 }
             </div>
         </aside>

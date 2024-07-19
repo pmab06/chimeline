@@ -1,7 +1,7 @@
 // import Post from '../components/Post';
 // import Subtitle from '../components/Subtitle';
 // import SidebarButton from '../components/SidebarButton';
-import { Post, Sidebar, WritePost, Subtitle, ReactionButton } from '../components';
+import { Post, Sidebar, WritePost, Subtitle } from '../components';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import '../styles/Home.css';
@@ -58,7 +58,7 @@ function Home() {
 			</main>
 
 			{/* ---------------- Sidebar 2 ---------------- */}
-			<Sidebar />
+			<Sidebar type='right'/>
 		</div>
 	</>
 }
