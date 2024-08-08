@@ -1,5 +1,7 @@
-# Chimeline
-Chimeline is a social media prototype website written in React & Express. Mainly inspired by old Twitter, it aims to bring the vibe of websites from around 2010-2015. Intended features include:
+<img src="https://raw.githubusercontent.com/pmab06/chimeline/main/client/src/assets/Chimeline.png" width=256px>
+
+## Meet Chimeline
+Chimeline is a prototype social media website written in React & Express. Mainly inspired by old Twitter, it aims to bring the vibe of websites from around 2010-2015. Intended features include:
 
 - Early 2010s styling;
 - Posting;
