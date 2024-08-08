@@ -3,7 +3,7 @@ function SidebarButton({ icon, text, path }) {
 
 	return <>
 		<button onClick={redirectFunction} className='SidebarButton d-flex align-items-center mb-2 p-2 justify-items-center'>
-			<span className="icon material-symbols-outlined" style={{fontSize: '1rem', fontWeight: 100}}>
+			<span className="icon material-symbols-outlined">
 				{icon}
 			</span>
 			<span className="text-label">{text}</span>

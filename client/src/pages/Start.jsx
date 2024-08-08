@@ -11,7 +11,7 @@ function Start() {
 			</nav>
 			<main className="d-flex flex-row justify-content-evenly align-items-center vh-100">
 				<div className="d-flex flex-column website-logo">
-					<img src="../src/assets/ChimelineSlogan.png" height="164px"></img>
+					<img src="../src/assets/Chimeline.png" height="164px"></img>
 				</div>
 				<div className="card homepage-card p-5">
 					<div className="d-flex flex-column card-body">
