@@ -29,7 +29,7 @@ function Home() {
 	
 // ==============================      HTML       ============================== // 
 	return <>
-		<div className='d-flex flex-row p-3 container'>
+		<div className='d-flex flex-row page-container'>
 
 			{/* ---------------- Sidebar 1 ---------------- */}
 			<Sidebar type='left' />

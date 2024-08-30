@@ -36,22 +36,35 @@ h1.card-title {
 }
 
 nav {
-  padding: 15px;
-  background-color: rgba(0, 3, 10, 0.172);
+  padding: 0.5rem;
 }
 
 nav>ul {
   margin: 0;
+  padding: 0.7rem;
   width: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
 }
 
 nav>ul>li {
   list-style: none;
+  align-items: center;
 }
-
-nav>ul>li>a {
+nav>ul>li>a{
   color: white;
   text-decoration: none;
+  padding: 0.3rem 0.5rem;
+  border-radius: 10px;
+  text-align: center;
+
+}
+nav>ul>li>a:hover {
+  font-weight: 700;
+  background-color: rgb(255, 255, 255);
+  transition: 0.1s;
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .pfp {
@@ -62,6 +75,8 @@ nav>ul>li>a {
 .BorderedContainer {
   border: 1px solid rgba(0, 0, 0, 0.4);
   border-radius: 2vmin;
+  padding: 1rem;
+  box-shadow: 0px 0px 10px 0px black;
 }
 
 .PostContainer {
@@ -117,27 +132,53 @@ strong {
 }
 
 .SendButton {
-  position: absolute;
+  position: relative;
   align-self: flex-end;
-  justify-self: flex-end;
-  transform: translate(-5px, 99px);
-  /* background-color: rgb(0, 110, 255); */
-  background: rgb(0, 157, 232);
-  background: linear-gradient(360deg, rgb(0, 255, 234) 0%, rgb(0, 162, 255) 10%, rgb(0, 89, 172) 40%, rgba(0, 56, 108, 1) 70%, rgba(213, 248, 255, 1) 100%);
-  border: 1px solid rgba(0, 1, 43, 0.719);
-  box-shadow: 0px 0px 10px 1px rgb(0, 89, 172);
+  transform: translate(-4px, -56px);
+  background-color: rgb(0, 110, 255);
+  border: 2px solid rgb(0, 195, 255);
   padding: 1.5rem;
   border-radius: 50% 15% 25% 15%;
 
 }
 
 .SendButton:active {
-  background: rgb(0, 157, 232);
-  background: linear-gradient(360deg, rgb(28, 117, 158) 0%, rgb(20, 72, 121) 30%, rgb(7, 31, 54) 100%);
-  border: 1px solid rgba(0, 1, 43, 0.719);
+  background-color: rgb(8, 64, 167);
+  border: 2px solid rgba(0, 1, 43, 0.719);
   box-shadow: 0px 0px 5px 0px rgb(0, 55, 107);
 }
 
 .reaction-button:hover {
   background-color: rgba(0, 110, 255, 0.3);
+}
+
+
+/* ===== Sidebar ===== */
+.sidebar {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sidebar span.text {
+  margin-left: 1rem;
+}
+
+/* Buttons for new tabs */
+.SidebarButton {
+  background-color: #00000000;
+  border: none;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.SidebarButton span.icon {
+  width: 2rem;
+}
+
+.SidebarButton:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.SidebarButton:active {
+  background-color: rgba(0, 0, 0, 0.3);
 }
