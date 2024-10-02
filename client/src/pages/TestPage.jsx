@@ -6,7 +6,7 @@ function TestPage() {
 	const [tbdata, setTbData] = useState([]);
 
 	useEffect(() => {
-		axios.get('/api/tbdata')
+		axios.get('/api/posts')
 			.then(response => {
 				if (Array.isArray(response.data)) { 
 					setTbData(response.data) 
@@ -23,7 +23,7 @@ function TestPage() {
 		<h2>Importing some data</h2>
 		<ul>
 			{tbdata.map(item => (
-				<li key={item.id}>{item.post_content}</li>
+				<li key={item.id}>{item.content}</li>
 			))}
 		</ul>
 		<a href="/">Click me to return to landing page</a>

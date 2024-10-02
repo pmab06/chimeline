@@ -1,7 +1,8 @@
-function SendButton() {
+function SendButton({onclick}) {
+    
 
-    return <button className='SendButton'>
-        <span className="material-symbols-outlined" style={{color: "white", fontVariationSettings: "'FILL'1"}}>
+    return <button onClick={onclick} className='SendButton'>
+        <span className="material-symbols-outlined" style={{ color: "white", fontVariationSettings: "FILL 1" }}>
             send
         </span>
     </button>

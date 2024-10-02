@@ -1,6 +1,3 @@
-// import Post from '../components/Post';
-// import Subtitle from '../components/Subtitle';
-// import SidebarButton from '../components/SidebarButton';
 import { Post, Sidebar, WritePost, Subtitle } from '../components';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
@@ -11,7 +8,7 @@ function Home() {
 	const [tbdata, setTbData] = useState([]);
 
 	useEffect(() => {
-		axios.get('/api/tbdata')
+		axios.get('/api/posts')
 			.then(response => {
 				if (Array.isArray(response.data)) {
 					setTbData(response.data)
@@ -26,8 +23,8 @@ function Home() {
 			})
 	}, []);
 
-	
-// ==============================      HTML       ============================== // 
+
+	// ==============================      HTML       ============================== // 
 	return <>
 		<div className='d-flex flex-row page-container'>
 
@@ -36,29 +33,32 @@ function Home() {
 
 			{/* ---------------- Main content ---------------- */}
 			<main className='d-flex flex-column align-items-center col-12 col-md-6 px-4'>
-				<WritePost/>
-				{
-					tbdata.length > 0 ? (
-						tbdata.map(item => (
-							<Post
-								profilePicture='defaulter.png'
-								displayName={item.displayName}
-								userName={item.userName}
-								content={item.post_content}
-								likes={item.likes}
-								replies={item.replies}
-								reposts={item.reposts}
-								createdAt={item.created_at}
-							/>
-						))
-					) : (
-						<Subtitle text='No posts found :(' />
-					)
-				}
+				<WritePost />
+				<div id='posts' className='d-flex flex-column align-items-center w-100'>
+					{
+						tbdata.length > 0 ? (
+							tbdata.map(item => (
+								<Post
+									key={item.id}
+									profilePicture='defaulter.png'
+									displayName={item.displayName}
+									userName={item.userName}
+									content={item.content}
+									likes={item.likes}
+									replies={item.replies}
+									reposts={item.reposts}
+									createdAt={item.created_at}
+								/>
+							))
+						) : (
+							<Subtitle text='No posts found :(' />
+						)
+					}
+				</div>
 			</main>
 
 			{/* ---------------- Sidebar 2 ---------------- */}
-			<Sidebar type='right'/>
+			<Sidebar type='right' />
 		</div>
 	</>
 }

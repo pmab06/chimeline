@@ -1,29 +1,51 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const connection = require('./db');
-const port = 3000;
+const pool = require('./db');
+const port = process.env.PORT;
 
 // Middleware para permitir requests cross-origin durante o desenvolvimento
 const cors = require('cors');
 app.use(cors());
+app.use(express.json());
 
 // Serve arquivos estáticos do diretório build do React
 app.use(express.static(path.join(__dirname, '../client/src')));
 
 app.get('/api', (req, res) => {
-  res.send('Hello from Express!');
+    res.send('Hello from Express!');
 });
 
-app.get('/api/tbdata', (req, res) => {
-  connection.query('SELECT * FROM posts', (error, results, fields) => {
-    if (error) {
-      res.status(500).send(error);
-    } else {
-      res.json(results);
+
+app.get('/api/posts', (req, res) => {
+    pool.query('SELECT * FROM posts', (error, results, fields) => {
+        if (error) {
+            res.status(500).send(error);
+        } else {
+            res.json(results);
+        }
     }
-  }
-  )
+    )
+});
+
+app.post('/api/posts', (req, res) => {
+    console.log(req.body)
+    const { author_id, content } = req.body;
+
+    if (author_id && content != '') {
+        const query = 'INSERT INTO posts (author_id, content) VALUES (?, ?)';
+        pool.query(query, [author_id, content], (error, results) => {
+            if (error) {
+                console.log(error)
+                return res.status(500).json({error: 'Something went wrong during query insertion.'})
+            } else {
+                return res.status(200)
+            }
+        });
+
+    } else {
+        return res.status(400).json({ error: 'Missing fields detected' })
+    }
 });
 
 // Para todas as outras rotas, serve o arquivo index.html do React
@@ -32,5 +54,5 @@ app.get('/api/tbdata', (req, res) => {
 //});
 
 app.listen(port, () => {
-  console.log(`Express: Hi! Server running on port ${port}`);
+    console.log(`Express: Hi! Server running on port ${port}`);
 });
