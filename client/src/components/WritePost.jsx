@@ -15,6 +15,7 @@ function WritePost() {
                 switch (res.status) {
                     case 200:
                         console.log('OKAY!')
+                        location.reload()
                         break;
                 }
             }

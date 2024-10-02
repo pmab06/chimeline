@@ -29,17 +29,16 @@ app.get('/api/posts', (req, res) => {
 });
 
 app.post('/api/posts', (req, res) => {
-    console.log(req.body)
     const { author_id, content } = req.body;
 
-    if (author_id && content != '') {
+    if ( author_id && content ) {
         const query = 'INSERT INTO posts (author_id, content) VALUES (?, ?)';
         pool.query(query, [author_id, content], (error, results) => {
             if (error) {
                 console.log(error)
                 return res.status(500).json({error: 'Something went wrong during query insertion.'})
-            } else {
-                return res.status(200)
+            } else if (results) {
+                return res.status(200).json({message: 'Post was sent successfully!'})
             }
         });
 
