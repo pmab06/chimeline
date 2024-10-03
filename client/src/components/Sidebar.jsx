@@ -18,12 +18,10 @@ function Sidebar(type) {
     )
 
     return <>
-        <aside className='d-flex flex-column col-12 col-md-3'>
-            <div className='sidebar BorderedContainer'>
+        <aside className='sidebar d-none d-lg-flex BorderedContainer'>
                 {
                     (type.type == 'left' ? leftSidebar : type.type == 'right' ? rightSidebar : '')
                 }
-            </div>
         </aside>
     </>
 };

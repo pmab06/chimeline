@@ -5,9 +5,9 @@ const createTableQuery = `
       id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
       author_id INT,
       content VARCHAR(2000),
-      likes BIGINT,
-      reposts BIGINT,
-      replies BIGINT,
+      likes BIGINT DEFAULT 0,
+      reposts BIGINT DEFAULT 0,
+      replies BIGINT DEFAULT 0,
       created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     );
 `;

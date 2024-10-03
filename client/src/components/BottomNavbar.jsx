@@ -3,7 +3,7 @@ function BottomNavbar(isVisible) {
         {
         isVisible ?
 
-            <nav className="bottom-navbar">
+            <nav className="bottom-navbar d-flex d-lg-none">
                 <a href="#">Home</a>
                 <a href="#">Test Page</a>
                 <a href="#">Landing Page</a>

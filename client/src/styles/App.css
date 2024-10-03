@@ -45,7 +45,8 @@ nav>ul {
   width: 50%;
   background-color: rgba(255, 255, 255, 0.2);
   border: 2px solid rgba(255, 255, 255, 0.3);
-  border-radius: 15px;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
   transition: 0.3s;
 }
 
@@ -57,10 +58,11 @@ nav>ul>li {
 nav>ul>li>a {
   color: white;
   text-decoration: none;
-  padding: 0.3rem 0.5rem;
-  border-radius: 10px;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.5rem;
   text-align: center;
-
+  transition: 0.3s;
+  box-sizing: border-box;
 }
 nav>ul:hover{
   border: 2px solid rgba(255, 255, 255, 0.8);
@@ -73,7 +75,7 @@ nav>ul:active{
 nav>ul>li>a:hover {
   font-weight: 700;
   background-color: rgb(255, 255, 255);
-  transition: 0.3s;
+  border-radius: 0.7rem;
   color: rgba(0, 0, 0, 0.7);
 }
 
@@ -86,6 +88,7 @@ nav>ul>li>a:hover {
   border: 1px solid rgba(0, 0, 0, 0.4);
   border-radius: 15px;
   padding: 1rem;
+  box-sizing: border-box;
 }
 
 .PostContainer, .write-post-container {
@@ -126,7 +129,7 @@ strong {
 
 }
 
-.SidebarButton span.icon {
+.sidebar-button span.icon {
   font-variation-settings:
     'FILL' 1,
     'wght' 400,
@@ -160,6 +163,7 @@ strong {
 }
 
 
+
 /* ===== Sidebar ===== */
 .sidebar {
   display: flex;
@@ -173,21 +177,24 @@ strong {
 }
 
 /* Buttons for new tabs */
-.SidebarButton {
+.sidebar-button {
   background-color: #00000000;
   border: none;
   width: 100%;
-  border-radius: 0.5rem;
+  border-radius: 0.2rem;
+  transition: 0.5s;
 }
 
-.SidebarButton span.icon {
+.sidebar-button span.icon {
   width: 2rem;
 }
 
-.SidebarButton:hover {
+.sidebar-button:hover {
   background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 0.7rem;
 }
 
-.SidebarButton:active {
+.sidebar-button:active {
   background-color: rgba(0, 0, 0, 0.3);
+  transition: 0.1s;
 }
