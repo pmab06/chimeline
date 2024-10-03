@@ -9,7 +9,7 @@ function Start() {
 					<li><a href="/Settings">Settings (W.I.P.)</a></li>
 				</ul>
 			</nav>
-			<main className="d-flex flex-row justify-content-evenly align-items-center vh-100">
+			<main className="d-flex flex-wrap flex-row justify-content-evenly align-items-center vh-100">
 				<div className="d-flex flex-column website-logo">
 					<img src="../src/assets/Chimeline.png" height="164px"></img>
 				</div>

@@ -21,13 +21,12 @@ html {
 
 .Start>main>.card input[type=text] {
   padding: 10px;
-  border-radius: 1vmin;
+  border-radius: 1rem;
   border: 1px solid gray
 }
 
 .Start>main>.homepage-card {
-  border-radius: 2vmin;
-  min-width: 800px;
+  border-radius: 1rem;
 }
 
 h1.card-title {
