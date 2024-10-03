@@ -26,13 +26,13 @@ function Home() {
 
 	// ==============================      HTML       ============================== // 
 	return <>
-		<div className='d-flex  page-container'>
-			<div className="d-flex flex-row">
+		<div className='page-container'>
+			<div className="main-container">
 				{/* ---------------- Sidebar 1 ---------------- */}
 				<Sidebar type='left' />
 
 				{/* ---------------- Main content ---------------- */}
-				<main className='d-flex flex-column align-items-center col-12 col-md-6 px-4'>
+				<main className='center-content'>
 					<WritePost />
 					<div id='posts' className='d-flex flex-column-reverse align-items-center w-100'>
 						{
@@ -60,8 +60,8 @@ function Home() {
 				{/* ---------------- Sidebar 2 ---------------- */}
 				<Sidebar type='right' />
 			</div>
+			<BottomNavbar isVisible={true} />
 		</div>
-		<BottomNavbar isVisible={true}/>
 	</>
 }
 export default Home;
