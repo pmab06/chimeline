@@ -1,0 +1,78 @@
+.Start {
+    background: url("../assets/sky.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 0.7rem;
+
+  }
+  
+  .Start>main>.card input[type=text] {
+    padding: 0.5rem;
+    border-radius: 1rem;
+    border: 1px solid gray
+  }
+  
+  .Start>main>.homepage-card {
+    border-radius: 1rem;
+  }
+  
+  h1.card-title {
+    font-size: xx-large;
+    font-weight: bold;
+  }
+  
+  .lp-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .lp-nav>ul {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    transition: 0.3s;
+  }
+  
+  .lp-nav>ul>li {
+    list-style: none;
+    align-items: center;
+  }
+  
+  .lp-nav>ul>li>a {
+    color: white;
+    text-decoration: none;
+    padding: 0.4rem 0.6rem;
+    border-radius: 0.3rem;
+    text-align: center;
+    transition: 0.3s;
+    box-sizing: border-box;
+    font-weight: 600;
+    font-size: medium;
+    font-smooth: always;
+  }
+  .lp-nav>ul:hover{
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 0px 20px 0px white inset;
+    transform: scale(1.015);
+  }
+  .lp-nav>ul:active{
+    transform: scale(1);
+  }
+  .lp-nav>ul>li>a:hover {
+    background-color: rgb(255, 255, 255);
+    border-radius: 0.7rem;
+    color: rgba(0, 0, 0, 0.7);
+  }  
+
+@media only screen and (min-width: 768px){
+    .lp-nav>ul{
+        width: 60%;
+    }
+}

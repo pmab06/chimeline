@@ -13,8 +13,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Start/>}></Route>
-          <Route path='/TestPage' element={<TestPage/>}></Route>
-          <Route path='/Home' element={<Home/>}></Route>
+          <Route path='/testpage' element={<TestPage/>}></Route>
+          <Route path='/home' element={<Home/>}></Route>
           <Route path='*' element={<NotFound/>}></Route>
         </Routes>
       </BrowserRouter>

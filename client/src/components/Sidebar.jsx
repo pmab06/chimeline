@@ -5,8 +5,8 @@ function Sidebar(type) {
     const leftSidebar = (
         <>
             <img src='../../src/assets/Chimeline.png' style={{width: '10rem'}}/>
-            <SidebarButton icon='home' text='Home' path='/Home' />
-            <SidebarButton icon='labs' text='Test Page' path='/TestPage' />
+            <SidebarButton icon='home' text='Home' path='/home' />
+            <SidebarButton icon='labs' text='Test Page' path='/testpage' />
             <SidebarButton icon='tooltip' text='Landing Page' path='/' />
         </>
     )
