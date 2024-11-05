@@ -27,14 +27,12 @@ function Home() {
 	// ==============================      HTML       ============================== // 
 	return <>
 		<div className='page-container'>
-			<div className="main-container">
-				{/* ---------------- Sidebar 1 ---------------- */}
+			<div className="main-container p-3 pb-0 p-lg-3">
 				<Sidebar type='left' />
-
 				{/* ---------------- Main content ---------------- */}
 				<main className='center-content'>
 					<WritePost />
-					<div id='posts' className='d-flex flex-column-reverse align-items-center w-100'>
+					<div id='posts' className='d-flex flex-column align-items-center w-100'>
 						{
 							tbdata.length > 0 ? (
 								tbdata.map(item => (
@@ -56,11 +54,9 @@ function Home() {
 						}
 					</div>
 				</main>
-
-				{/* ---------------- Sidebar 2 ---------------- */}
 				<Sidebar type='right' />
 			</div>
-			<BottomNavbar isVisible={true} />
+			<BottomNavbar/>
 		</div>
 	</>
 }

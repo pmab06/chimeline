@@ -18,7 +18,7 @@ app.get('/api', (req, res) => {
 
 
 app.get('/api/posts', (req, res) => {
-    pool.query('SELECT * FROM posts', (error, results, fields) => {
+    pool.query('SELECT * FROM posts ORDER BY created_at DESC', (error, results, fields) => {
         if (error) {
             res.status(500).send(error);
         } else {

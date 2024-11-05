@@ -1,17 +1,36 @@
-function BottomNavbar(isVisible) {
+function BottomNavbar() {
     return <>
-        {
-        isVisible ?
+        <nav className="bottom-navbar d-flex d-lg-none">
 
-            <nav className="bottom-navbar d-flex d-lg-none">
-                <a href="#">Home</a>
-                <a href="#">Test Page</a>
-                <a href="#">Landing Page</a>
-                <a href="#">Coming Soon</a>
-            </nav>
+            <a href="#">
+                <span className="icon material-symbols-outlined">
+                    home
+                </span>
+                Home
+            </a>
 
-            : null
-        }
+            <a href="#">
+                <span className="icon material-symbols-outlined">
+                    labs
+                </span>
+                Test Page
+            </a>
+
+            <a href="#">
+                <span className="icon material-symbols-outlined">
+                    flight_land 
+                </span>
+                Landing Page
+            </a>
+
+            <a href="#">
+                <span className="icon material-symbols-outlined">
+                    construction
+                </span>
+                Coming Soon
+            </a>
+
+        </nav>
     </>
 }
 

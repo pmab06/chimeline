@@ -1,45 +1,47 @@
 /* App-wide CSS */
 @font-face {
-  font-family: 'Inter';
-  src: url('./src/assets/Inter-VariableFont_slnt\,wght.ttf');
+    font-family: 'Inter';
+    src: url('./src/assets/Inter-VariableFont_slnt\,wght.ttf');
 }
 
 html {
-  font-family: 'Inter';
-  font-size: 16px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
+    font-family: 'Inter';
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
+
 .pfp {
-  height: 2.5em;
-  border-radius: 50%;
+    height: 2.5em;
+    border-radius: 50%;
 }
 
 .BorderedContainer {
-  border: 1px solid rgba(0, 0, 0, 0.4);
-  border-radius: 15px;
-  padding: 1rem;
-  box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    padding: 1rem;
+    box-sizing: border-box;
 }
 
-.PostContainer, .write-post-container {
-  margin-bottom: 1rem;
-  width: 100%;
+.PostContainer,
+.write-post-container {
+    margin-bottom: 1rem;
+    width: 100%;
 }
 
 .PostData img,
 strong {
-  margin-right: 0.5rem;
+    margin-right: 0.5rem;
 }
 
 .PostData span {
-  opacity: 40%;
+    opacity: 40%;
 }
 
 .subtitle {
-  margin-top: 10vh;
-  opacity: 40%;
+    margin-top: 10vh;
+    opacity: 40%;
 }
 
 
@@ -47,86 +49,97 @@ strong {
 
 .reaction-button,
 .SendButton {
-  display: inline-flex;
-  width: 2rem;
-  height: 2rem;
-  border: none;
-  align-items: center;
-  justify-content: center;
+    display: inline-flex;
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    align-items: center;
+    justify-content: center;
 }
 
 .reaction-button {
-  background-color: #00000000;
-  border-radius: 50%;
+    background-color: #00000000;
+    border-radius: 50%;
 
 }
 
 .sidebar-button span.icon {
-  font-variation-settings:
-    'FILL' 1,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
 }
 
 .reaction-button span {
-  width: 24px;
-  height: 24px;
+    width: 24px;
+    height: 24px;
 }
 
 .SendButton {
-  position: relative;
-  align-self: flex-end;
-  background-color: rgb(0, 110, 255);
-  box-shadow: 0px 4px 0px 0px rgb(33, 166, 255);
-  padding: 1.5rem;
-  border-radius: 50% 15% 20% 15%;
-  transition: 40ms;
+    position: relative;
+    align-self: flex-end;
+    background-color: rgb(0, 110, 255);
+    box-shadow: 0px 4px 0px 0px rgb(33, 166, 255);
+    padding: 1.5rem;
+    border-radius: 50% 15% 20% 15%;
+    transition: 40ms;
 }
 
 .SendButton:active {
-  background-color: rgb(42, 170, 255);
-  box-shadow: 0px 0px 10px 0px rgb(0, 183, 255);
-  transform: translate(0px, 4px);
+    background-color: rgb(42, 170, 255);
+    box-shadow: 0px 0px 10px 0px rgb(0, 183, 255);
+    transform: translate(0px, 4px);
 }
 
 .reaction-button:hover {
-  background-color: rgba(0, 110, 255, 0.3);
+    background-color: rgba(0, 110, 255, 0.3);
 }
 
 
 
 /* ===== Sidebar ===== */
 .sidebar {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
 }
 
 .sidebar span.text {
-  margin-left: 1rem;
+    margin-left: 1rem;
 }
 
 /* Buttons for new tabs */
 .sidebar-button {
-  background-color: #00000000;
-  border: none;
-  width: 100%;
-  border-radius: 0.2rem;
-  transition: 0.5s;
+    background-color: #00000000;
+    border: none;
+    width: 100%;
+    border-radius: 0.2rem;
+    transition: 0.5s;
 }
 
 .sidebar-button span.icon {
-  width: 2rem;
+    width: 2rem;
 }
 
 .sidebar-button:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-  border-radius: 0.7rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 0.7rem;
 }
 
 .sidebar-button:active {
-  background-color: rgba(0, 0, 0, 0.3);
-  transition: 0.1s;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: 0.1s;
+}
+
+
+/* ===== Bottom Navbar ===== */
+.bottom-navbar a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    color: initial;
 }
