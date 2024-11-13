@@ -5,32 +5,31 @@
     background-size: cover;
     padding: 0.7rem;
 
-  }
-  
-  .Start>main>.card input[type=text] {
+}
+
+.Start>main>.card input[type=text] {
     padding: 0.5rem;
     border-radius: 1rem;
     border: 1px solid gray
-  }
-  
-  .Start>main>.homepage-card {
+}
+
+.Start>main>.homepage-card {
     border-radius: 1rem;
-  }
-  
-  h1.card-title {
+}
+
+h1.card-title {
     font-size: xx-large;
     font-weight: bold;
-  }
-  
-  .lp-nav {
+}
+
+.lp-nav {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+}
 
-  .lp-nav>ul {
+.lp-nav>ul {
     display: flex;
-    width: 100%;
     margin: 0;
     background-color: rgba(255, 255, 255, 0.2);
     border: 2px solid rgba(255, 255, 255, 0.3);
@@ -38,14 +37,15 @@
     padding: 1rem;
     border-radius: 0.5rem;
     transition: 0.3s;
-  }
-  
-  .lp-nav>ul>li {
+}
+
+.lp-nav>ul>li {
     list-style: none;
     align-items: center;
-  }
-  
-  .lp-nav>ul>li>a {
+    margin-inline: 1rem;
+}
+
+.lp-nav>ul>li>a {
     color: white;
     text-decoration: none;
     padding: 0.4rem 0.6rem;
@@ -56,20 +56,24 @@
     font-weight: 600;
     font-size: medium;
     font-smooth: always;
-  }
-  .lp-nav>ul:hover{
+}
+
+.lp-nav>ul:hover {
     border: 2px solid rgba(255, 255, 255, 0.8);
     box-shadow: 0px 0px 20px 0px white inset;
-    transform: scale(1.015);
-  }
-  .lp-nav>ul:active{
+    transform: scale(1.02);
+}
+
+.lp-nav>ul:active {
     transform: scale(1);
-  }
-  .lp-nav>ul>li>a:hover {
+}
+
+.lp-nav>ul>li>a:hover {
     background-color: rgb(255, 255, 255);
     border-radius: 0.7rem;
     color: rgba(0, 0, 0, 0.7);
-  }  
+}
+
 /* 
 @media only screen and (min-width: 768px){
     .lp-nav>ul{
