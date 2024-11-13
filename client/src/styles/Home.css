@@ -51,10 +51,8 @@ main {
 .main-container{
     display: flex;
     flex-direction: row;
-    width: 100%;
     flex: 14;
     justify-content: space-between;
-    box-sizing: border-box;
     overflow: hidden;
 }
 .center-content{
@@ -67,9 +65,20 @@ main {
     flex-direction: row;
     width: 100%;
     flex: 1;
+    max-height: 4rem;
     height: 6rem;
     align-items: center;
     justify-content: space-around;
+}
+
+.bottom-navbar a{
+    padding: 0.25rem;
+    border-radius: 0;
+    transition: 0.3s;
+}
+.bottom-navbar a:hover{
+    background-color: rgba(0, 110, 255, 0.3);
+    border-radius: 100rem;
 }
 
 /* ===== New post input ===== */

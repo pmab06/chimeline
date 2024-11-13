@@ -4,6 +4,10 @@
     src: url('./src/assets/Inter-VariableFont_slnt\,wght.ttf');
 }
 
+*{
+    box-sizing: border-box;
+}
+
 html {
     font-family: 'Inter';
     font-size: 16px;
@@ -11,6 +15,12 @@ html {
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
 }
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'opsz' 24
+  }
 
 .pfp {
     height: 2.5em;
@@ -22,6 +32,8 @@ html {
     border-radius: 15px;
     padding: 1rem;
     box-sizing: border-box;
+    background: rgb(255,255,255);
+    /* background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgb(219, 219, 219) 100%);  */
 }
 
 .PostContainer,
@@ -61,16 +73,7 @@ strong {
     background-color: #00000000;
     border-radius: 50%;
 
-}
-
-.sidebar-button span.icon {
-    font-variation-settings:
-        'FILL' 1,
-        'wght' 400,
-        'GRAD' 0,
-        'opsz' 24
-}
-
+}   
 .reaction-button span {
     width: 24px;
     height: 24px;
@@ -85,7 +88,9 @@ strong {
     border-radius: 50% 15% 20% 15%;
     transition: 40ms;
 }
-
+.SendButton>span{
+    font-variation-settings: 'FILL' 1;
+}
 .SendButton:active {
     background-color: rgb(42, 170, 255);
     box-shadow: 0px 0px 10px 0px rgb(0, 183, 255);
@@ -135,6 +140,19 @@ strong {
 
 
 /* ===== Bottom Navbar ===== */
+.bottom-navbar{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex: 1;
+    height: 6rem;
+    align-items: center;
+    justify-content: space-evenly;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 50%, rgba(181,181,181,1) 100%); 
+    border-top: 1px solid rgba(181,181,181,1);
+}
+
 .bottom-navbar a {
     display: flex;
     flex-direction: column;
