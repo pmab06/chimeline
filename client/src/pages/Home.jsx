@@ -27,7 +27,7 @@ function Home() {
 	// ==============================      HTML       ============================== // 
 	return <>
 		<div className='page-container'>
-			<div className="main-container p-3 pb-0 p-lg-3">
+			<div className="main-container m-3 mb-0 m-lg-3">
 				<Sidebar type='left' />
 				{/* ---------------- Main content ---------------- */}
 				<main className='center-content'>
