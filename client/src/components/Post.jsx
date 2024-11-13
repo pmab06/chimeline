@@ -3,9 +3,19 @@ import ReactionButton from './ReactionButton';
 function Post({ profilePicture, displayName, userName, content, likes, reposts, replies, createdAt }) {
 
 	const convertedISODate = new Date(createdAt)
+	const dateNow = new Date()
+
+	// diff = dateNow - convertedISODate
+	// let ms = diff % 1000
+	// let ss = Math.floor(diff / 1000) % 60
+	// let mm = Math.floor(diff / 1000 / 60) % 60
+	// let hh = Math.floor(diff / 1000 / 60 / 60)
+
+	
+	// console.log(`${hh}hr, ${mm}min, ${ss}sec, ${ms}ms`)
 
 	// whoever made these functions for the Date object needs some serious help
-	const parsedDate = convertedISODate.getDate() + "/" + (convertedISODate.getMonth()+1) + "/" + convertedISODate.getFullYear()
+	const parsedDate = convertedISODate.getDate() + "/" + (convertedISODate.getMonth() + 1) + "/" + convertedISODate.getFullYear()
 
 	console.log(parsedDate)
 	return <div className='BorderedContainer PostContainer'>
