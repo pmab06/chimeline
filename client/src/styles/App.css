@@ -32,10 +32,18 @@ html {
     border-radius: 15px;
     padding: 1rem;
     box-sizing: border-box;
-    background: rgb(255,255,255);
+    background: transparent;
     /* background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgb(219, 219, 219) 100%);  */
+    transition: 2s background;
 }
-
+.BorderedContainer.clickable:hover{
+    background: rgba(0, 0, 0, 0.2);
+    transition: 0.3s background;
+}
+.BorderedContainer.clickable:active, .BorderedContainer.clicked{
+    background: rgba(0, 0, 0, 0.3) !important;
+    transition: 0.01s background;
+}
 .PostContainer,
 .write-post-container {
     margin-bottom: 1rem;
@@ -47,15 +55,33 @@ strong {
     margin-right: 0.5rem;
 }
 
-.PostData span {
-    opacity: 40%;
+.ProfileCard{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+}
+.ProfileCard .pfp{
+    margin-right: 0.5rem;
+}
+.ProfileCard .ProfileCardData{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+}
+.subtle {
+    opacity: 50%;
 }
 
 .subtitle {
-    margin-top: 10vh;
     opacity: 40%;
 }
-
+#posts .subtitle{
+    margin-top: 10vh;
+}
 
 /* Like, reply, repost, send post */
 
@@ -109,6 +135,7 @@ strong {
     flex-direction: column;
     flex: 1;
     overflow: hidden;
+    justify-content: space-between;
 }
 
 .sidebar span.text {

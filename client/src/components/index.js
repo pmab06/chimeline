@@ -5,3 +5,4 @@ export { default as Subtitle } from './Subtitle';
 export { default as Sidebar } from './Sidebar';
 export { default as WritePost } from './WritePost';
 export { default as BottomNavbar } from './BottomNavbar';
+export { default as ProfileCard } from './ProfileCard';
