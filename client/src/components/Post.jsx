@@ -1,6 +1,15 @@
 import ReactionButton from './ReactionButton';
 
-function Post({ profilePicture, displayName, userName, content, likes, reposts, replies, createdAt }) {
+// Declaring default values
+function Post({ profilePicture = 'defaulter.png',
+	displayName = 'Unknown User',
+	userName = 'Unknown',
+	content = '',
+	likes = 0,
+	reposts = 0,
+	replies = 0,
+	createdAt
+}) {
 
 	const convertedISODate = new Date(createdAt)
 	const dateNow = new Date()
@@ -11,7 +20,7 @@ function Post({ profilePicture, displayName, userName, content, likes, reposts, 
 	// let mm = Math.floor(diff / 1000 / 60) % 60
 	// let hh = Math.floor(diff / 1000 / 60 / 60)
 
-	
+
 	// console.log(`${hh}hr, ${mm}min, ${ss}sec, ${ms}ms`)
 
 	// whoever made these functions for the Date object needs some serious help
@@ -23,25 +32,25 @@ function Post({ profilePicture, displayName, userName, content, likes, reposts, 
 			<img className='pfp' src={`../../src/assets/${profilePicture}`} />
 			<div className='d-flex flex-wrap'>
 				{/* Display name */}
-				<strong>{displayName ? displayName : 'Unknown User'}</strong>
+				<strong>{displayName}</strong>
 
 				{/* User name / handle */}
-				<span>@{userName ? userName : '?'} • {parsedDate ? parsedDate : ''}</span>
+				<span className='subtle'>@{userName} • {parsedDate ? parsedDate : ''}</span>
 			</div>
 		</div>
 		{/* Post content */}
-		<p>{content ? content : ''}</p>
+		<p>{content}</p>
 
 		<div className='interaction-footer'>
 			{/* Self explanatory */}
 			<div>
-				<ReactionButton icon='favorite' /><span>{likes ? likes : '0'}</span>
+				<ReactionButton icon='favorite' /><span>{likes}</span>
 			</div>
 			<div>
-				<ReactionButton icon='repeat' /><span>{reposts ? reposts : '0'}</span>
+				<ReactionButton icon='repeat' /><span>{reposts}</span>
 			</div>
 			<div>
-				<ReactionButton icon='tooltip' /><span>{replies ? replies : '0'}</span>
+				<ReactionButton icon='tooltip' /><span>{replies}</span>
 			</div>
 		</div>
 	</div>
