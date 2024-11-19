@@ -1,7 +1,7 @@
 import ReactionButton from './ReactionButton';
 
 // Declaring default values
-function Post({ profilePicture = 'defaulter.png',
+function Post({ profilePicture = 'ChimelineUser.png',
 	displayName = 'Unknown User',
 	userName = 'Unknown',
 	content = '',
@@ -26,7 +26,6 @@ function Post({ profilePicture = 'defaulter.png',
 	// whoever made these functions for the Date object needs some serious help
 	const parsedDate = convertedISODate.getDate() + "/" + (convertedISODate.getMonth() + 1) + "/" + convertedISODate.getFullYear()
 
-	console.log(parsedDate)
 	return <div className='BorderedContainer PostContainer'>
 		<div className='PostData d-flex flex-row align-items-center'>
 			<img className='pfp' src={`../../src/assets/${profilePicture}`} />
@@ -44,10 +43,10 @@ function Post({ profilePicture = 'defaulter.png',
 		<div className='interaction-footer'>
 			{/* Self explanatory */}
 			<div>
-				<ReactionButton icon='favorite' /><span>{likes}</span>
+				<ReactionButton icon='favorite' btnclass='like' /><span>{likes}</span>
 			</div>
 			<div>
-				<ReactionButton icon='repeat' /><span>{reposts}</span>
+				<ReactionButton icon='repeat' btnclass='repost' /><span>{reposts}</span>
 			</div>
 			<div>
 				<ReactionButton icon='tooltip' /><span>{replies}</span>

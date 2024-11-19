@@ -1,4 +1,4 @@
-function ProfileCard({ displayName = 'Unknown User', userName = 'Unknown', profilePicture = 'defaulter.png' }) {
+function ProfileCard({ displayName = 'Unknown User', userName = 'Unknown', profilePicture = 'ChimelineUser.png' }) {
 
     let clicked = true
     const toggle = (e) => {

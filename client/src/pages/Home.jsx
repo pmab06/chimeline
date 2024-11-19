@@ -38,7 +38,7 @@ function Home() {
 								tbdata.map(item => (
 									<Post
 										key={item.id}
-										profilePicture='defaulter.png'
+										profilePicture='ChimelineUser.png'
 										displayName={item.author_id === -1 ? 'Not Implemented' : item.displayName}
 										userName={item.author_id === -1 ? 'NotImplemented' : item.userName}
 										content={item.content}
