@@ -1,8 +1,8 @@
 import React, {useState} from 'react'
 
-function ReactionButton({ icon }) {
+function ReactionButton({ icon, btnclass = '' }) {
     return (
-        <button className='reaction-button'>
+        <button className={'reaction-button '+btnclass}>
             <span className="material-symbols-outlined">
                 {icon}
             </span>

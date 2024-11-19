@@ -84,7 +84,6 @@ strong {
 }
 
 /* Like, reply, repost, send post */
-
 .reaction-button,
 .SendButton {
     display: inline-flex;
@@ -94,16 +93,27 @@ strong {
     align-items: center;
     justify-content: center;
 }
-
 .reaction-button {
     background-color: #00000000;
     border-radius: 50%;
-
 }   
 .reaction-button span {
     width: 24px;
     height: 24px;
 }
+.reaction-button.clicked span{
+    font-variation-settings: 'FILL' 1;
+}
+.reaction-button.clicked.like span{
+    color: rgb(255, 0, 76);
+}
+.reaction-button.clicked.repost span{
+    color: rgb(42, 167, 125);
+}
+.reaction-button:hover {
+    background-color: rgba(0, 110, 255, 0.3);
+}
+
 
 .SendButton {
     position: relative;
@@ -123,11 +133,6 @@ strong {
     transform: translate(0px, 4px);
 }
 
-.reaction-button:hover {
-    background-color: rgba(0, 110, 255, 0.3);
-}
-
-
 
 /* ===== Sidebar ===== */
 .sidebar {
@@ -137,7 +142,6 @@ strong {
     overflow: hidden;
     justify-content: space-between;
 }
-
 .sidebar span.text {
     margin-left: 1rem;
 }
@@ -179,7 +183,6 @@ strong {
     background: linear-gradient(180deg, rgba(255,255,255,1) 50%, rgba(181,181,181,1) 100%); 
     border-top: 1px solid rgba(181,181,181,1);
 }
-
 .bottom-navbar a {
     display: flex;
     flex-direction: column;
