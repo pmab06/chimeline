@@ -3,9 +3,10 @@ const pool = require('./db');
 const createTableQuery = `
     CREATE TABLE IF NOT EXISTS users (
         id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-        username VARCHAR(2000),
-        password BIGINT DEFAULT 0,
-        displayname BIGINT DEFAULT 0,
+        username VARCHAR(256),
+        email VARCHAR(256),
+        password VARCHAR(2000),
+        displayname VARCHAR(256),
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     );
 
