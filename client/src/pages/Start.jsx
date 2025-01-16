@@ -25,7 +25,7 @@ function Start() {
 						<label htmlFor="password">Password</label>
 						<input type="text" id="password" className="mb-4"></input>
 						<a href="/home" className="btn btn-primary mb-5">Create account</a>
-						<p className="card-subtitle align-self-center">...or <a href="/testpage" type="button" className="btn btn-outline-primary">Login</a> if you already have one</p>
+						<p className="card-subtitle align-self-center">...or <a href="/login" type="button" className="btn btn-outline-primary">Login</a> if you already have one</p>
 					</div>
 				</div>
 			</main>
