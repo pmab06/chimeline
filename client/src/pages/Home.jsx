@@ -49,14 +49,14 @@ function Home() {
 									/>
 								))
 							) : (
-								<Subtitle text='No posts found :(' />
+								<span className='subtle'>No posts found :&#x2768;</span>
 							)
 						}
 					</div>
 				</main>
 				<Sidebar type='right' />
 			</div>
-			<BottomNavbar/>
+			<BottomNavbar />
 		</div>
 	</>
 }
