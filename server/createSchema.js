@@ -21,7 +21,7 @@ const createTableQuery = `
     );
 `;
 
-pool.query(createTableQuery, (err, results, fields) => {
+pool.query(createTableQuery, (err) => {
     if (err) {
         console.error('/!\\ Something went wrong: ', err);
     } else {
